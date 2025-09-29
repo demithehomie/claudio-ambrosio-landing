@@ -15,6 +15,7 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import ClinicsSection from "./components/ClinicsSection";
 import FinalConversionSection from "./components/FinalConversionSection";
 import FooterSection from "./components/FooterSection";
+import FamososQueAprovaramSection from "./components/FamososQueAprovaramSection";
 
 const LandingPage = () => {
   return (
@@ -94,8 +95,8 @@ const LandingPage = () => {
               {
                 "@type": "PostalAddress",
                 streetAddress:
-                  "Shopping Praia da Costa, 5º andar - Torre Leste (acesso lateral do cinema)",
-                addressLocality: "Vila Velha",
+                  "Clínica Riva , Av Nossa Senhora dos Navegantes 675, Salas 414 à 417,(Edifício palácio do Café),Enseada do Suá",
+                addressLocality: "Vitória",
                 addressRegion: "ES",
                 postalCode: "29101-010",
                 addressCountry: "BR",
@@ -124,7 +125,7 @@ const LandingPage = () => {
 
         {/* Sticky WhatsApp CTA */}
         <StickyWhatsAppCTA
-          phoneNumber="5521999999999"
+          phoneNumber="5532988940001"
           message="Olá Dr. Cláudio! Gostaria de agendar uma consulta para discutir meus objetivos de saúde e bem-estar."
         />
 
@@ -144,6 +145,8 @@ const LandingPage = () => {
 
           {/* Testimonials Section */}
           <TestimonialsSection />
+
+          <FamososQueAprovaramSection />
 
           {/* Clinics Section */}
           <ClinicsSection />

@@ -19,12 +19,12 @@ const FloatingNavigation = ({ className = '' }) => {
       icon: 'Stethoscope',
       description: 'Serviços médicos especializados'
     },
-    {
-      id: 'sobre',
-      label: 'Sobre o Dr.',
-      icon: 'GraduationCap',
-      description: 'Credenciais e experiência'
-    },
+    // {
+    //   id: 'sobre',
+    //   label: 'Sobre o Dr.',
+    //   icon: 'GraduationCap',
+    //   description: 'Credenciais e experiência'
+    // },
     {
       id: 'depoimentos',
       label: 'Depoimentos',

@@ -9,254 +9,169 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Maria Silva",
-      age: 45,
-      location: "Rio de Janeiro, RJ",
-      avatar: "https://randomuser.me/api/portraits/women/32.jpg",
-      condition: "Fadiga Crônica e Ganho de Peso",
-      treatment: "Reposição Hormonal + Emagrecimento",
+      name: 'Maria S.',
+      age: 47,
+      location: 'Rio de Janeiro, RJ',
+      avatar: 'https://randomuser.me/api/portraits/women/32.jpg',
+      condition: 'Obesidade e baixa energia',
+      treatment: 'Programa médico de emagrecimento',
       rating: 5,
-      testimonial: `Após anos me sentindo cansada e ganhando peso sem explicação, encontrei no Dr. Cláudio a solução que eu precisava.\n\nEm apenas 3 meses de tratamento, perdi 12kg e recuperei uma energia que não sentia há anos. Hoje acordo disposta e tenho qualidade de vida novamente.\n\nO acompanhamento é excepcional e os resultados falam por si só!`,
-      results: {
-        weight_loss: "12kg",
-        energy_increase: "85%",
-        treatment_duration: "3 meses"
-      },
+      testimonial:
+        'Procurei atendimento após anos de dificuldade com o peso. Com orientação clínica, passo a passo, obtive melhora na rotina, disposição e relação com a alimentação. O acompanhamento faz diferença.',
       before_after: {
-        before: "Cansaço constante, 78kg, baixa autoestima",
-        after: "Energia renovada, 66kg, confiança total"
-      }
+        before: 'Rotina irregular, pouca energia, peso elevado',
+        after: 'Hábitos organizados, maior disposição e saúde em progresso',
+      },
     },
     {
       id: 2,
-      name: "Carlos Mendes",
-      age: 52,
-      location: "São Paulo, SP",
-      avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-      condition: "Andropausa e Perda de Libido",
-      treatment: "Terapia Hormonal Masculina",
+      name: 'Carlos M.',
+      age: 54,
+      location: 'São Paulo, SP',
+      avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
+      condition: 'Metabolismo lento e sono ruim',
+      treatment: 'Ajustes clínicos e rotina',
       rating: 5,
-      testimonial: `Como empresário, sempre priorizei o trabalho e negligenciei minha saúde. Aos 50 anos, me sentia um homem de 70.\n\nO Dr. Cláudio identificou meus desequilíbrios hormonais e criou um protocolo personalizado. Em 6 semanas, já sentia diferença na disposição e libido.\n\nHoje, aos 52, me sinto melhor que aos 40. Minha esposa e eu estamos muito gratos!`,
-      results: {
-        libido_improvement: "90%",
-        energy_increase: "75%",
-        treatment_duration: "4 meses"
-      },
+      testimonial:
+        'Trabalho sob pressão e negligenciei meu sono e alimentação. O plano clínico me ajudou a organizar metas e revisar condutas com segurança. Evoluí com constância.',
       before_after: {
-        before: "Sem energia, libido baixa, irritabilidade",
-        after: "Vitalidade renovada, relacionamento melhor"
-      }
+        before: 'Cansaço, sono leve, alimentação descompassada',
+        after: 'Sono mais consistente, rotina ajustada e mais ânimo',
+      },
     },
     {
       id: 3,
-      name: "Ana Costa",
-      age: 38,
-      location: "Muriaé, MG",
-      avatar: "https://randomuser.me/api/portraits/women/28.jpg",
-      condition: "Alergias Alimentares Severas",
-      treatment: "Imunoterapia Personalizada",
+      name: 'Ana C.',
+      age: 39,
+      location: 'Vitória, ES',
+      avatar: 'https://randomuser.me/api/portraits/women/28.jpg',
+      condition: 'Excesso de peso e desânimo',
+      treatment: 'Cuidado clínico contínuo',
       rating: 5,
-      testimonial: `Sofria com alergias alimentares há mais de 10 anos. Não podia comer quase nada sem ter reações.\n\nO Dr. Cláudio fez testes detalhados e iniciou um tratamento de dessensibilização. Gradualmente, fui recuperando a capacidade de comer normalmente.\n\nHoje posso desfrutar de refeições em família sem medo. É uma liberdade que não tem preço!`,
-      results: {
-        allergy_reduction: "95%",
-        food_tolerance: "80% dos alimentos",
-        treatment_duration: "8 meses"
-      },
+      testimonial:
+        'A conversa franca e o acompanhamento regular me ajudaram a manter o foco. Sem promessas, com clareza e ajustes. Me sinto no caminho certo.',
       before_after: {
-        before: "Restrições alimentares severas, isolamento social",
-        after: "Alimentação normal, vida social ativa"
-      }
+        before: 'Variações de humor e baixa disposição',
+        after: 'Maior autocuidado e consistência nos hábitos',
+      },
     },
-    {
-      id: 4,
-      name: "Roberto Santos",
-      age: 41,
-      location: "Praia da Costa, ES",
-      avatar: "https://randomuser.me/api/portraits/men/38.jpg",
-      condition: "Performance Esportiva",
-      treatment: "Otimização Hormonal para Atletas",
-      rating: 5,
-      testimonial: `Como triatleta amador, sempre busquei melhorar minha performance, mas havia chegado num platô.\n\nO Dr. Cláudio analisou meus hormônios e metabolismo, criando um protocolo específico para atletas. Os resultados foram impressionantes!\n\nMelhorei meus tempos em 20% e a recuperação entre treinos ficou muito mais rápida. Recomendo para qualquer atleta sério!`,
-      results: {
-        performance_improvement: "20%",
-        recovery_time: "50% mais rápida",
-        treatment_duration: "3 meses"
-      },
-      before_after: {
-        before: "Performance estagnada, recuperação lenta",
-        after: "Novos recordes pessoais, energia constante"
-      }
-    }
   ];
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials?.length);
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 8000);
-
     return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials?.length]);
+  }, [isAutoPlaying, testimonials.length]);
 
   const handlePrevious = () => {
     setIsAutoPlaying(false);
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials?.length) % testimonials?.length);
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   const handleNext = () => {
     setIsAutoPlaying(false);
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials?.length);
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
 
-  const currentTestimonialData = testimonials?.[currentTestimonial];
+  const t = testimonials[currentTestimonial];
 
   return (
     <section id="depoimentos" className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-success/10 rounded-full px-4 py-2 mb-4">
             <Icon name="Heart" size={16} className="text-success mr-2" />
-            <span className="text-sm font-medium text-success">Histórias de Transformação</span>
+            <span className="text-sm font-medium text-success">Relatos de pacientes</span>
           </div>
-          
+
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Vidas{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-success to-primary">
-              Transformadas
-            </span>
+            Caminhos reais de{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-success to-primary">cuidado</span>
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conheça as histórias reais de pacientes que recuperaram sua saúde, 
-            energia e qualidade de vida com nossos tratamentos personalizados
+            Processos clínicos com acompanhamento. Experiências individuais; os resultados variam.
           </p>
         </div>
 
-        {/* Main Testimonial */}
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="grid lg:grid-cols-2">
-              {/* Patient Info & Image */}
               <div className="bg-gradient-to-br from-primary to-secondary text-white p-8 lg:p-12">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="relative">
-                    <Image
-                      src={currentTestimonialData?.avatar}
-                      alt={currentTestimonialData?.name}
-                      className="w-16 h-16 rounded-full border-4 border-white/20"
-                    />
+                    <Image src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full border-4 border-white/20" />
                     <div className="absolute -bottom-1 -right-1 bg-success rounded-full p-1">
                       <Icon name="Check" size={12} className="text-white" />
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h3 className="text-xl font-bold">{currentTestimonialData?.name}</h3>
-                    <p className="text-white/80">{currentTestimonialData?.age} anos • {currentTestimonialData?.location}</p>
+                    <h3 className="text-xl font-bold">{t.name}</h3>
+                    <p className="text-white/80">
+                      {t.age} anos • {t.location}
+                    </p>
                   </div>
                 </div>
-                
-                {/* Rating */}
+
                 <div className="flex items-center space-x-1 mb-6">
-                  {[...Array(currentTestimonialData?.rating)]?.map((_, i) => (
+                  {[...Array(t.rating)].map((_, i) => (
                     <Icon key={i} name="Star" size={20} className="text-accent fill-current" />
                   ))}
-                  <span className="ml-2 text-white/80">({currentTestimonialData?.rating}.0)</span>
+                  <span className="ml-2 text-white/80">({t.rating}.0)</span>
                 </div>
-                
-                {/* Condition & Treatment */}
+
                 <div className="space-y-4 mb-8">
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-sm text-white/70 mb-1">Condição Inicial</div>
-                    <div className="font-medium">{currentTestimonialData?.condition}</div>
+                    <div className="text-sm text-white/70 mb-1">Motivo</div>
+                    <div className="font-medium">{t.condition}</div>
                   </div>
-                  
+
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-sm text-white/70 mb-1">Tratamento Realizado</div>
-                    <div className="font-medium">{currentTestimonialData?.treatment}</div>
+                    <div className="text-sm text-white/70 mb-1">Cuidado</div>
+                    <div className="font-medium">{t.treatment}</div>
                   </div>
                 </div>
-                
-                {/* Results */}
+
                 <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(currentTestimonialData?.results)?.map(([key, value], index) => (
-                    <div key={index} className="text-center bg-white/10 rounded-lg p-3">
-                      <div className="text-2xl font-bold text-accent">{value}</div>
-                      <div className="text-xs text-white/70 capitalize">
-                        {key?.replace('_', ' ')}
-                      </div>
-                    </div>
-                  ))}
+                  <div className="text-center bg-white/10 rounded-lg p-3">
+                    <div className="text-xs text-white/70 mb-1">Antes</div>
+                    <div className="text-sm font-medium">{t.before_after.before}</div>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-lg p-3">
+                    <div className="text-xs text-white/70 mb-1">Depois</div>
+                    <div className="text-sm font-medium">{t.before_after.after}</div>
+                  </div>
                 </div>
               </div>
-              
-              {/* Testimonial Content */}
+
               <div className="p-8 lg:p-12">
                 <div className="flex items-center justify-between mb-6">
                   <Icon name="Quote" size={32} className="text-primary/20" />
-                  
                   <div className="flex items-center space-x-2">
-                    <button
-                      onClick={handlePrevious}
-                      className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-                    >
+                    <button onClick={handlePrevious} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
                       <Icon name="ChevronLeft" size={20} />
                     </button>
-                    <button
-                      onClick={handleNext}
-                      className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-                    >
+                    <button onClick={handleNext} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
                       <Icon name="ChevronRight" size={20} />
                     </button>
                   </div>
                 </div>
-                
-                <div className="prose prose-lg max-w-none mb-8">
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                    {currentTestimonialData?.testimonial}
-                  </p>
+
+                <div className="prose prose-lg max-w-none mb-4">
+                  <p className="text-gray-700 leading-relaxed">{t.testimonial}</p>
                 </div>
-                
-                {/* Before/After */}
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h4 className="font-semibold text-gray-900 mb-4">Transformação:</h4>
-                  
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="p-2 bg-error/10 rounded-lg">
-                        <Icon name="Minus" size={16} className="text-error" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-medium text-error mb-1">Antes</div>
-                        <div className="text-sm text-gray-600">
-                          {currentTestimonialData?.before_after?.before}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <div className="p-2 bg-success/10 rounded-lg">
-                        <Icon name="Plus" size={16} className="text-success" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-medium text-success mb-1">Depois</div>
-                        <div className="text-sm text-gray-600">
-                          {currentTestimonialData?.before_after?.after}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+                <p className="text-xs text-gray-500">Relatos pessoais; não configuram promessa de resultado.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Testimonial Navigation */}
         <div className="flex justify-center mt-8 space-x-2">
-          {testimonials?.map((_, index) => (
+          {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => {
@@ -264,34 +179,10 @@ const TestimonialsSection = () => {
                 setIsAutoPlaying(false);
               }}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentTestimonial === index
-                  ? 'bg-primary scale-125' :'bg-gray-300 hover:bg-gray-400'
+                currentTestimonial === index ? 'bg-primary scale-125' : 'bg-gray-300 hover:bg-gray-400'
               }`}
             />
           ))}
-        </div>
-
-        {/* Summary Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">98%</div>
-            <div className="text-sm text-gray-600">Taxa de Satisfação</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-3xl font-bold text-success mb-2">15.000+</div>
-            <div className="text-sm text-gray-600">Vidas Transformadas</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-3xl font-bold text-accent mb-2">30+</div>
-            <div className="text-sm text-gray-600">Anos de Experiência</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-3xl font-bold text-secondary mb-2">4</div>
-            <div className="text-sm text-gray-600">Clínicas Ativas</div>
-          </div>
         </div>
       </div>
     </section>

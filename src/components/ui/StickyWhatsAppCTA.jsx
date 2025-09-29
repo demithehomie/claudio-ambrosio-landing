@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Icon from '../AppIcon';
 
 const StickyWhatsAppCTA = ({ 
-  phoneNumber = "5511999999999",
+  phoneNumber = "5532988940001",
   message = "Olá Dr. Cláudio! Gostaria de agendar uma consulta para discutir meus objetivos de saúde e bem-estar.",
   className = ''
 }) => {

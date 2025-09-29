@@ -19,7 +19,7 @@ const FooterSection = () => {
     "Reposição Hormonal",
     "Endocrinologia Avançada",
     "Tratamento de Alergias",
-    "Remodelação Corporal",
+    "Remodelação dos Glúteos",
     "Performance Esportiva",
   ];
 
@@ -27,23 +27,23 @@ const FooterSection = () => {
     {
       name: "Rio de Janeiro (Barra da Tijuca)",
       address: "Estrada do Joá, 3884 - Barra da Tijuca",
-      phone: "(21) 2484-2484",
+      phone: "32988940001",
     },
     {
       name: "São Paulo (Jardim Paulista)",
       address: "Avenida Brasil, 471 - Jardim Paulista",
-      phone: "(32) 98894-0001",
+      phone: "32988940001",
     },
     {
       name: "Muriaé (MG)",
       address: "Rua Dr. Afonso Canêdo, 124 - Centro",
-      phone: "(32) 3721-1412",
+      phone: "32988940001",
     },
     {
-      name: "Vila Velha (ES)",
+      name: "Vitória (ES)",
       address:
-        "Shopping Praia da Costa - 5º andar, Torre Leste (acesso lateral do cinema)",
-      phone: "(27) 3071-4413",
+        "Clínica Riva - Av Nossa Senhora dos Navegantes 675, Salas 414 à 417,(Edifício palácio do Café),Enseada do Suá",
+      phone: "32988940001",
     },
   ];
 
